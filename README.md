@@ -3,9 +3,12 @@
 
 Kosmos is a personal project of mine designed to serve the nix configuration files for my homelab.
 
-Current folder structured (updated 20.08.2026)
+WARNING: This is "pre-pre-release" software, so **everything will go wrong**. **USE IT AT YOUR OWN RISK!!!**
+
+Current folder structure (updated 20.08.2026):
 
 ```
+.
 ├── configuration.nix
 ├── hardware-configuration.nix (autoconfigured by your own system)
 ├── system
