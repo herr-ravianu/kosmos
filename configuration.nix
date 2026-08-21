@@ -9,6 +9,7 @@ let
       (file: builtins.match ".*\\.nix" file != null)
       userFiles);
 in
+
 {
   imports =
     [
@@ -20,19 +21,28 @@ in
     ]
     ++ userImports;
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot = {
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
 
-  # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_latest;
+  };
 
   time.timeZone = "Europe/Bucharest";
 
   i18n.defaultLocale = "en_US.UTF-8";
+  
   console = {
-    font = "Lat2-Terminus16";
     keyMap = "us";
+  };
+
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
   };
 
   system.copySystemConfiguration = true;
