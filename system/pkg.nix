@@ -8,6 +8,5 @@
     wget
     htop
     cloudflared
-    tailscale
   ];
 }
