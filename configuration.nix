@@ -16,6 +16,7 @@ in
       ./hardware-configuration.nix
       ./system/network.nix
       ./system/pkg.nix
+      ./system/services.nix
     ]
     ++ userImports;
 

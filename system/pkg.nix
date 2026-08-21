@@ -1,12 +1,13 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
-    vim
     git
+    vim
     curl
     wget
     htop
-    tmux
+    cloudflared
+    tailscale
   ];
 }
