@@ -22,5 +22,6 @@ Instructions: coming soon
 
 Documentation: coming soon
 
-License: MIT, see [LICENSE](https://gitlab.com/ravianu/kosmos/-/blob/24821c287c653b6eba6e37e33a13bc6ef23161cc/LICENSE).
+License: MIT, see [LICENSE](https://github.com/herr-ravianu/kosmos/blob/a845c15ad202602315e586b39370248446fb6f30/LICENSE).
+
 Software and packages referenced by this configuration are subject to their respective licenses.
