@@ -1,6 +1,8 @@
 # Kosmos — Installation Guide
 
-This guide explains how to install NixOS using the configuration provided by this repository.
+This guide explains how to install NixOS using the configuration provided by the Kosmos repository.
+
+> **Alpha / Pre-release:** Kosmos has a stable base, but many components are still experimental. Configuration and behavior may change as the project develops. **Use it at your own risk.**
 
 ## Requirements
 
@@ -101,6 +103,7 @@ The resulting structure should look similar to:
 /mnt/etc/nixos/
 ├── configuration.nix
 ├── hardware-configuration.nix
+├── INSTALL.md
 ├── system
 │   ├── meta.nix
 │   ├── network.nix
@@ -143,13 +146,15 @@ Verify that the configuration files are present:
 ls -la /mnt/etc/nixos
 ```
 
-You can perform a dry build before installing:
+Perform a dry build before installing:
 
 ```bash
 nixos-rebuild dry-build --root /mnt
 ```
 
 If the configuration builds successfully, proceed with the installation.
+
+> Because Kosmos is still in alpha, a successful dry build confirms that the current configuration can be evaluated and built; it does not guarantee that every experimental component will behave as expected after installation.
 
 ## 7. Install NixOS
 
@@ -168,6 +173,14 @@ reboot
 ```
 
 Remove the installation media before the system boots again.
+
+## Alpha Notice
+
+Kosmos is currently an **alpha / pre-release** project.
+
+The base configuration is considered stable enough for continued development and testing, but many components are experimental. Updates may introduce configuration changes, new defaults, or breaking changes.
+
+Before deploying an updated version to an important system, review the repository changes and test the configuration where practical.
 
 ## References
 
