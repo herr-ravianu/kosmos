@@ -11,15 +11,18 @@
     };
 
     firewall = {
-      enable = false; # Temporary disabled
+      enable = true;
 
-      # trustedInterfaces = [
-      #   config.services.tailscale.interfaceName
-      # ];
-      #
-      # allowedUDPPorts = [
-      #   config.services.tailscale.port
-      # ];
+      trustedInterfaces = [
+        config.services.tailscale.interfaceName
+      ];
+
+      allowedTCPPorts = [
+        22 # 80 443
+      ]
+      allowedUDPPorts = [
+        config.services.tailscale.port
+      ];
     };
   };
 
