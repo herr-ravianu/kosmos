@@ -7,5 +7,6 @@
     isNormalUser = true;
     description = "Alice";
     extraGroups = [ "wheel" ];
+    shell = pkgs.zsh;
   };
 }

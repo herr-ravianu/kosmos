@@ -25,8 +25,8 @@ in
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
+      timeout = 2;
     };
-
     kernelPackages = pkgs.linuxPackages_latest;
   };
 
@@ -44,6 +44,8 @@ in
     autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
   };
+
+  users.users.root.shell = pkgs.zsh;
 
   system.copySystemConfiguration = true;
 
